@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Créditos</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="{{ url_for('main.index')}}" class="header__titulo">Créditos Web App</a></h1>
+
+        <ul class="navbar">
+            <li class="nav-item"><a href="{{ url_for('creditos.addCredit')}}" class="navbar-item__text">Registrar</a></li>
+            <li class="nav-item"><a href="{{ url_for('creditos.listCredits')}}" class="navbar-item__text">Listado</a></li>
+            <li class="nav-item"><a href="{{ url_for('creditos.graphCredits')}}" class="navbar-item__text">Gráficos</a></li>
+        </ul>
+    </header>
+
+    <main>
+        {% block contenido %}
+    
+        {% endblock %}
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

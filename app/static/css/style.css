@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #654ea3;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eaafc8, #654ea3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+header {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 50px;
+}
+
+button {
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: #654ea3;
+    border: none;
+} 
+
+button:hover {
+    color: #654ea3;
+    background-color: #ccc4e3;
+}
+
+input {
+    border: 2px solid #654ea3;
+    border-radius: 6px;
+    height: 25px;
+    font-size: 15px;
+}
+
+label {
+    font-size: 17px;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    border-radius: 7px;
+    background-color: white;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgb(193, 193, 193);
+}
+
+.navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-item {
+    display: inline;
+    padding: 10px;
+}
+
+.boton {
+    color: white;
+    background-color: #654ea3;
+    text-decoration: none;
+    box-shadow: none;
+    border: none;
+    display: inline-block;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 320px;
+}
+
+.card-graph {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 800px;
+}
+
+.bienvenida {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.header__titulo {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-item__text {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-item__text:hover{
+    color: #eaafc8;
+}
+
+.button-delete {
+    background-color: rgb(255, 0, 0);
+    border: 1px solid rgb(255, 0, 0);
+    color: white;
+    text-decoration: none;
+    box-shadow: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+.button-delete:hover {
+    background-color: white;
+    border: 1px solid rgb(255, 0, 0);
+    color: rgb(255, 0, 0);
+}
+
+.button-edit {
+    background-color: rgb(16, 149, 25);
+    border: 1px solid rgb(16, 149, 25);
+    color: white;
+    text-decoration: none;
+    box-shadow: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+.button-edit:hover {
+    background-color: white;
+    border: 1px solid rgb(16, 149, 25);
+    color: rgb(16, 149, 25);
+}
+
+.container-graph {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mensaje-validacion {
+    color: red;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }

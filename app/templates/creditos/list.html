@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+<div class="container">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Cliente</th>
+            <th>Monto</th>
+            <th>Tasa de interés (%)</th>
+            <th>Plazo (meses)</th>
+            <th>Fecha de otorgamiento</th>
+            <th>Acción</th>
+        </tr>
+        
+        {% for credito in creditos %}
+        <tr>
+            <td>{{ credito.id }}</td>
+            <td>{{ credito.cliente }}</td>
+            <td>{{ credito.monto }}</td>
+            <td>{{ credito.tasa_interes }}</td>
+            <td>{{ credito.plazo }}</td>
+            <td>{{ credito.fecha_otorgamiento }}</td>
+            <td>
+                <a href="{{ url_for('creditos.editCredit', id=credito.id) }}" class="button-edit"><strong>Editar</strong></a>
+                <a href="{{ url_for('creditos.deleteCredit', id=credito.id) }}"
+                class="button-delete"><strong>Eliminar</strong></a>
+            </td>
+        </tr>
+
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

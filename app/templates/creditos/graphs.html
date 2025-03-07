@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+<script>
+    const total = "{{ total }}"
+    const monto = "{{ monto }}"
+    const distribucion = JSON.parse('{{ distribucion | tojson}}')
+    const cantidad = JSON.parse('{{ cantidad | tojson}}')
+</script>
+
+
+
+<div class="container-graph">
+    <div class="card-graph">
+        <h2>Gráfica de total créditos otorgados</h2>
+        <canvas id="graph-total"></canvas>
+    </div>
+    
+    <div class="card-graph">
+        <h2>Gráfica de monto total otorgado</h2>
+        <canvas id="graph-monto"></canvas>
+    </div>
+    
+    <div class="card-graph">
+        <h2>Gráfica de distribución por cliente (monto)</h2>
+        <canvas id="graph-clientes"></canvas>
+    </div>
+
+    <div class="card-graph">
+        <h2>Gráfica de distribución por cliente (cantidad)</h2>
+        <canvas id="graph-clientes-cantidad"></canvas>
+    </div>
+</div>
+
+
+<script src="../../static/js/graph.js"></script>
+
+{% endblock %}

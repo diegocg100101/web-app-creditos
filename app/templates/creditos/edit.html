@@ -4,31 +4,30 @@
 
 <div class="container">
     <div class="card">
-        <h2>Registra los datos</h2>
-        <form action="{{ url_for('creditos.addCredit') }}" class="formulario" method="post" id="formulario">
+        <h2>Actualiza los datos</h2>
+        <form action="{{ url_for('creditos.editCredit', id=credito.id) }}" class="formulario" method="post" id="formulario">
             <label for="cliente" >Nombre del cliente:</label>
-            <input type="text" name="cliente" id="cliente" onchange="nombreValid()">
+            <input type="text" name="cliente" id="cliente" value="{{ credito.cliente }}" onchange="nombreValid()">
             <span id="nombreMensaje" class="mensaje-validacion"></span>
-            
+
             <label for="monto">Monto:</label>
-            <input type="number" name="monto" id="monto" onchange="montoValid()">
+            <input type="number" name="monto" id="monto" value="{{ credito.monto }}" onchange="montoValid()">
             <span id="montoMensaje" class="mensaje-validacion"></span>
-            
-            
+        
             <label for="tasa">Tasa de interés (%):</label>
-            <input type="number" name="tasa" id="tasa" onchange="tasaValid()">
+            <input type="number" name="tasa" id="tasa" value="{{ credito.tasa_interes }}" onchange="tasaValid()">
             <span id="tasaMensaje" class="mensaje-validacion"></span>
-            
+        
             <label for="plazo">Plazo en meses:</label>
-            <input type="number" name="plazo" id="plazo" onchange="plazoValid()">
+            <input type="number" name="plazo" id="plazo" value="{{ credito.plazo }}" onchange="plazoValid()">
             <span id="plazoMensaje" class="mensaje-validacion"></span>
-            
+        
             <label for="fecha">Fecha de otorgamiento:</label>
-            <input type="date" name="fecha" id="fecha" style="width: 64%;" onchange="fechaValid()">
+            <input type="date" name="fecha" id="fecha" style="width: 64%;" value="{{ credito.fecha_otorgamiento }}" onchange="fechaValid()">
             <span id="fechaMensaje" class="mensaje-validacion"></span>
-            
+
             <div class="button-container">
-                <button type="submit" id="enviar" onsubmit="enviar()">Enviar</button>
+                <button type="submit" id="enviar" onsubmit="enviar()">Actualizar</button>
             </div>
         </form>
     </div>
