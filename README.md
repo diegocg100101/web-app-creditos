@@ -54,6 +54,15 @@ Posterior, se debe ejecutar el siguiente comando dentro del directorio del proye
 ```
 .venv\Scripts\activate
 ```
+> [!NOTE]
+> En caso de tener problema con la activación del entorno virtual, es posible que los permisos del usuario en el equipo estén restringidos, por lo que se sugiere ejecutar la CMD como administrador, o bien, ejecutar el siguiente comando.
+
+```
+Set-ExecutionPolicy -Scope CurrentUser unrestricted
+```
+
+> [!CAUTION]
+> Este comando habilita la ejecución de scripts al usuario en cuestión, por lo que es importante tomarlo en cuenta si no se desea habilitarlo.
 
 #### 3. Instalar las librerías necesarias
 Este proyecto requiere de dos librerías para funcionar correctamente, las cuales son: **Flask** y **Flask SQLAlchemy**. Para instalarlas, se deben ejecutar los siguientes comandos **pip** en la terminal o CMD una vez que se activó el entorno virtual.
