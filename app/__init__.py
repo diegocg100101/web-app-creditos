@@ -6,6 +6,12 @@ from .extensions import db
 from .models.creditos import Creditos
 
 def create_app():
+    """
+    Función para configurar la aplicación y registrar Blueprints
+
+    Returns:
+        Flask instance : instancia de Flask con la configuración de la app
+    """
     app = Flask(__name__)
     
     app.config.from_object(Config)

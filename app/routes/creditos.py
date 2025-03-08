@@ -13,7 +13,7 @@ def addCredit():
 
     Métodos:
         - GET  : Muestra el formulario de registro.
-        - POST : Recibe los datos del formulario y crea un nuevo crédito.
+        - POST : Recibe los datos del formulario y crea un nuevo crédito en la base de datos.
 
     Parámetros en request.form:
         - cliente (str) : Nombre del cliente.
@@ -24,6 +24,7 @@ def addCredit():
 
     Retorna:
         - Redirige a la lista de créditos si la operación es exitosa.
+        - Si la operación no es exitosa, renderiza nuevamente el formulario.
         - Renderiza el formulario con un mensaje de error si falla la operación.
     """
     if request.method == 'POST':
@@ -40,18 +41,14 @@ def addCredit():
             db.session.commit()
             return redirect(url_for('creditos.listCredits'))
         except:
-            print('Los campos están mal')
             return render_template('creditos/add.html')
     else:
         return render_template('creditos/add.html')
 
-@creditos.route('/list', methods=['GET'])
+@creditos.route('/list')
 def listCredits():
     """
     Devuelve todos los créditos ingresados en la base de datos.
-
-    Métodos:
-        - GET : Muestra la tabla con la información de todos los créditos.
 
     Retorna:
         - Renderiza la tabla con la lista de créditos obtenidos de la base de datos.
@@ -106,7 +103,7 @@ def editCredit(id):
 
     Retorna:
         - Redirige a la lista de créditos si la operación es exitosa.
-        - Renderiza el formulario con un mensaje de error si falla la operación.
+        - Renderiza el formulario y devuelve un error 404.
         - Renderiza el formulario de edición con los valores del crédito correspondiente al ID.
     """
     data = Creditos.query.get_or_404(id)

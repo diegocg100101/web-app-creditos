@@ -75,7 +75,7 @@ pip install -U Flask-SQLAlchemy
 
 
 #### 4. Iniciar el servidor
-Dentro del archivo **app.py** se encuentran importadas todas las configuraciones necesarias para que la aplicación pueda funcionar correctamente con **SQLite** a través del **ORM SQLAlchemy**, así como las rutas, modelos y vistas. Para correr el proyecto se debe ejecutar la siguiente línea de comando.
+Dentro del archivo **app.py** se llama a la función que crea todas las configuraciones necesarias para que la aplicación pueda funcionar correctamente con **SQLite** a través del **ORM SQLAlchemy**, así como el registro de las rutas. Para correr el proyecto se debe ejecutar la siguiente línea de comando.
 
 ##### Linux/MacOS
 ```
@@ -107,7 +107,7 @@ En este punto ya se puede navegar dentro de la aplicación y utilizar las caract
 | **DELETE /creditos/delete/{id}** | Elimina el crédito correspondiente al ID en la base de datos.     |    
 | **GET /creditos/edit/{id}** | Devuelve el template HTML del formulario con los datos de la instancia correspondiente al ID. |
 | **POST /creditos/edit/{id}** | Actualiza los datos de la instancia correspondiente al ID.               | 
-| **GET /creditos/graph**  | Devuelve la cantidad total de créditos otorgados, el monto total otorgado, los montos otorgados por cliente y la cantidad de créditos otorgados por cliente, así como también devuelve el template HTML con las gráficas representando estos datos.                  |
+| **GET /creditos/graph**  | Devuelve la cantidad total de créditos otorgados, el monto total otorgado, los montos otorgados por cliente y la cantidad de créditos otorgados por cliente, así como también devuelve el template HTML con las gráficas que representan estos datos.                  |
 
 
 
