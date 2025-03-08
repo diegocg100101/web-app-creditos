@@ -1,7 +1,8 @@
+
+/**
+ * Gráfica de barras de la cantidad total de créditos otorgados.
+ */
 const totalGraph = document.getElementById('graph-total');
-
-console.log(cantidad)
-
 new Chart(totalGraph, {
     type: 'bar',
     data: {
@@ -24,6 +25,9 @@ new Chart(totalGraph, {
     }
 });
 
+/**
+ * Gráfica de barras del monto total de créditos otorgados.
+ */
 const montoGraph = document.getElementById('graph-monto');
 new Chart(montoGraph, {
     type: 'bar',
@@ -45,6 +49,9 @@ new Chart(montoGraph, {
     }
 });
 
+/**
+ * Gráfica tipo dona de la distribución del total de monto otorgado por cliente.
+ */
 const distribuciones = document.getElementById('graph-clientes');
 new Chart(distribuciones, {
     type: 'doughnut',
@@ -60,6 +67,9 @@ new Chart(distribuciones, {
     }
 });
 
+/**
+ * Gráfica de barras de la distribución del total de créditos otorgados por cliente.
+ */
 const distribucionesCantidad = document.getElementById('graph-clientes-cantidad');
 new Chart(distribucionesCantidad, {
     type: 'bar',

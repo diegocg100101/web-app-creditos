@@ -6,7 +6,7 @@ Esta aplicación permite gestionar créditos otorgados y mostrar gráficos que r
 Para correr el proyecto se requiere seguir los siguientes pasos a continuación. 
 
 > [!IMPORTANT]
-> Se asume que existe una versión instalada de Python y Git en la computadora. 
+> Se asume que existe una versión instalada de Python y Git en la computadora del usuario. 
 
 #### 1. Clonar el repositorio
 Para clonar el repositorio se debe ejecutar el siguiente comando en una terminal Git posicionado en el directorio donde se desea clonar el repositorio:
@@ -74,6 +74,8 @@ localhost:5000/
 ``` 
 Esto nos dirigirá a la dirección IP local en el puerto 5000 y hará una petición GET al endpoint "/" de la API.
 
+En este punto ya se puede navegar dentro de la aplicación y utilizar las características de la misma.
+
 ## API endpoints
 
 | Endpoint       | Descripción                                                                 |
@@ -96,10 +98,19 @@ Esto nos dirigirá a la dirección IP local en el puerto 5000 y hará una petici
 ## CRUD
 
 ### Registrar crédito
+![Registrar](./img/addForm.png)
+
 
 ### Lista de créditos
 
+![Tabla](./img/listForm.png)
+
+#### Editar 
+
+![Editar](./img/editForm.png)
+
 ## Gráficos
 
-
+![Gráficos 1](./img/graphs1.png)
+![Gráficos 2](./img/graphs2.png)
 

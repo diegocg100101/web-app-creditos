@@ -1,6 +1,18 @@
 from app.extensions import db
 
 class Creditos(db.Model):
+    """
+    Representa un crédito otorgado a un cliente. 
+    Hereda de la clase Model de SQLAlchemy para realizar la operaciones en la base de datos.
+
+    Atributos:
+        id (int)                 : Identificador del crédito.
+        cliente (str)            : Nombre del cliente.
+        monto (float)            : Monto del crédito.
+        tasa_interes (float)     : Tasa de interés aplicada.
+        plazo (int)              : Plazo en meses.
+        fecha_otorgamiento (str) : Fecha en formato YYYY-MM-DD.
+    """
     __tablename__ = 'creditos'
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
