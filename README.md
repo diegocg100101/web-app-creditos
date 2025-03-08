@@ -62,7 +62,7 @@ Set-ExecutionPolicy -Scope CurrentUser unrestricted
 ```
 
 > [!CAUTION]
-> Este comando habilita la ejecución de scripts al usuario en cuestión, por lo que es importante tomarlo en cuenta si no se desea habilitarlo.
+> Este comando habilita la ejecución de scripts al usuario en cuestión, por lo que es importante tomarlo en cuenta si no se desea ceder permisos.
 
 #### 3. Instalar las librerías necesarias
 Este proyecto requiere de dos librerías para funcionar correctamente, las cuales son: **Flask** y **Flask SQLAlchemy**. Para instalarlas, se deben ejecutar los siguientes comandos **pip** en la terminal o CMD una vez que se activó el entorno virtual.
